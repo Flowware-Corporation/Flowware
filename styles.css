@@ -126,6 +126,24 @@ nav {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+/* Secciones */
+.seccion {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seccion h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--texto-oscuro);
+}
+
+.seccion-alternativa {
+    background: var(--gris-claro);
+}
+
 /* Sección Sobre Nosotros */
 .grilla-nosotros {
     display: grid;
