@@ -152,3 +152,78 @@ nav {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
+
+/* Sección de nuestros servicios */
+.grilla-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tarjeta-servicio {
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(66, 133, 244, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--gris-medio);
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(66, 133, 244, 0.15);
+}
+
+.icono-servicio {
+    width: 80px;
+    height: 80px;
+    background: var(--azul-claro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    color: var(--azul-primario);
+}
+
+/* Sección de portafolio */
+.grilla-portafolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.elemento-portafolio {
+    background: var(--blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(66, 133, 244, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.elemento-portafolio:hover {
+    transform: translateY(-5px);
+}
+
+.imagen-portafolio {
+    height: 200px;
+    background: linear-gradient(45deg, var(--azul-claro), var(--azul-primario));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    font-size: 3rem;
+}
+
+.contenido-portafolio {
+    padding: 1.5rem;
+}
+
+.contenido-portafolio h3 {
+    color: var(--azul-primario);
+    margin-bottom: 0.5rem;
+}
