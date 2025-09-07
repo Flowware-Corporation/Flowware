@@ -150,6 +150,89 @@
             </div>
         </div>
     </section>
+    
+<!-- Sección de Contacto -->
+    <section id="contacto" class="seccion seccion-alternativa">
+        <h2>Contacto</h2>
+        <div class="contenido-contacto">
+            <div class="informacion-contacto">
+                <h3 style="color: var(--azul-primario); margin-bottom: 2rem;">Información de Contacto</h3>
+                <div class="elemento-contacto">
+                    <div class="icono-contacto">📧</div>
+                    <div>
+                        <strong>Email</strong><br>
+                        flowware.corp@gmail.com<br>
+                        
+                    </div>
+                </div>
+                <div class="elemento-contacto">
+                    <div class="icono-contacto">📱</div>
+                    <div>
+                        <strong>Teléfono</strong><br>
+                        +52 56-2358-9128<br>
+                        +52 56-1158-7631
+                    </div>
+                </div>
+                <div class="elemento-contacto">
+                    <div class="icono-contacto">📍</div>
+                    <div>
+                        <strong>Dirección</strong><br>
+                         Mar Mediterráneo, 227<br>
+                         Miguel Hidalgo, CDMX, México
+                    </div>
+                </div>
+                <div class="elemento-contacto">
+                    <div class="icono-contacto">🕒</div>
+                    <div>
+                        <strong>Horario de Atención</strong><br>
+                        Lunes a Viernes: 9:00 AM - 6:00 PM<br>
+                        Sábados: 9:00 AM - 2:00 PM
+                    </div>
+                </div>
+            </div>
+            <div class="formulario-contacto">
+                <h3 style="color: var(--azul-primario); margin-bottom: 2rem;">Envíanos un Mensaje</h3>
+                <form onsubmit="manejarEnvio(event)">
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="servicio">Servicio de Interés</label>
+                        <select id="servicio" name="servicio" style="width: 100%; padding: 12px; border: 2px solid var(--gris-medio); border-radius: 8px;">
+                            <option value="">Selecciona un servicio</option>
+                            <option value="desarrollo-web">Desarrollo Web</option>
+                            <option value="apps-moviles">Apps Móviles</option>
+                            <option value="soluciones-cloud">Soluciones Cloud</option>
+                            <option value="automatizacion">Automatización</option>
+                            <option value="ciberseguridad">Ciberseguridad</option>
+                            <option value="business-intelligence">Business Intelligence</option>
+                            <option value="consultoria">Consultoría General</option>
+                        </select>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                    </div>
+                    <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2025 FlowWare. Todos los derechos reservados. </p>
+    </footer>
+</body>
+</html>
 
 
