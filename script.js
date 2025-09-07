@@ -1,41 +1,18 @@
 // Alternar menú móvil
 function alternarMenu() {
-    const enlacesNavegacion = document.getElementById('navLinks');
+    const enlacesNavegacion = document.getElementById('enlacesNavegacion');
     enlacesNavegacion.classList.toggle('active');
 }
 
+
 // Cerrar menú móvil al hacer clic en un enlace
-document.querySelectorAll('.nav-links a').forEach(enlace => {
+document.querySelectorAll('.enlaces-navegacion a').forEach(enlace => {
     enlace.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('active');
+        document.getElementById('enlacesNavegacion').classList.remove('active');
     });
 });
 
-// Desplazamiento suave para los enlaces de navegación
-document.querySelectorAll('a[href^="#"]').forEach(ancla => {
-    ancla.addEventListener('click', function (e) {
-        e.preventDefault();
-        const objetivo = document.querySelector(this.getAttribute('href'));
-        if (objetivo) {
-            objetivo.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Agregar efecto de desplazamiento al encabezado
-window.addEventListener('scroll', function() {
-    const encabezado = document.querySelector('header');
-    if (window.scrollY > 100) {
-        encabezado.classList.add('scrolled');
-    } else {
-        encabezado.classList.remove('scrolled');
-    }
-});
-
-// Manejar envío del formulario
+// Funcion para manejar envío del formulario
 function manejarEnvio(evento) {
     evento.preventDefault();
     
@@ -47,7 +24,7 @@ function manejarEnvio(evento) {
     const servicio = datosFormulario.get('servicio');
     const mensaje = datosFormulario.get('mensaje');
     
-    // Validación simple
+    // Validación 
     if (!nombre || !email || !mensaje) {
         alert('Por favor, completa todos los campos obligatorios.');
         return;
@@ -59,31 +36,5 @@ function manejarEnvio(evento) {
     // Reiniciar formulario
     evento.target.reset();
 }
-
-// Animar tarjetas al hacer scroll
-const opcionesObservador = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observador = new IntersectionObserver(function(entradas) {
-    entradas.forEach(entrada => {
-        if (entrada.isIntersecting) {
-            entrada.target.style.opacity = '1';
-            entrada.target.style.transform = 'translateY(0)';
-        }
-    });
-}, opcionesObservador);
-
-// Observar todas las tarjetas
-document.addEventListener('DOMContentLoaded', function() {
-    const tarjetas = document.querySelectorAll('.about-card, .service-card, .portfolio-item');
-    tarjetas.forEach(tarjeta => {
-        tarjeta.style.opacity = '0';
-        tarjeta.style.transform = 'translateY(30px)';
-        tarjeta.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observador.observe(tarjeta);
-    });
-});
 
 

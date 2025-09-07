@@ -81,6 +81,25 @@ nav {
     cursor: pointer;
 }
 
+/* Estilos para movil */
+@media (max-width: 768px) {
+  .enlaces-navegacion {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 60px; 
+    right: 0;
+    background: var(--blanco); 
+    padding: 1rem;
+    gap: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .enlaces-navegacion.active {
+    display: flex;
+  }
+}
+
 /* Sección principal */
 .hero {
     background: linear-gradient(135deg, var(--azul-primario) 0%, var(--azul-secundario) 100%);
