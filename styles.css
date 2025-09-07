@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-primario: #4285F4;
+    --azul-secundario: #1a73e8;
+    --azul-oscuro: #1557b0;
+    --azul-claro: #e8f0fe;
+    --texto-oscuro: #2c3e50;
+    --texto-claro: #5f6368;
+    --blanco: #ffffff;
+    --gris-claro: #f8f9fa;
+    --gris-medio: #dee2e6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--texto-oscuro);
+}
+
+/* Encabezado y Navegación */
+header {
+    background: var(--blanco);
+    box-shadow: 0 2px 10px rgba(66, 133, 244, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: sticky;
+}
+
+.marcador-logo {
+    width: 100px;
+    height: 60px;
+    background: var(--white);
+    display: flex;
+}
+
+.enlaces-navegacion {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.enlaces-navegacion a {
+    text-decoration: none;
+    color: var(--texto-oscuro);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.enlaces-navegacion a:hover {
+    color: var(--azul-primario);
+}
+
+.menu-movil {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--azul-primario);
+    cursor: pointer;
+}
+
+/* Sección principal */
+.hero {
+    background: linear-gradient(135deg, var(--azul-primario) 0%, var(--azul-secundario) 100%);
+    color: var(--blanco);
+    padding: 120px 5% 80px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.contenido-hero {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.boton-cta {
+    background: var(--blanco);
+    color: var(--azul-primario);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.boton-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
