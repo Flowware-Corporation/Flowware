@@ -7,47 +7,90 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header id="encabezado">
         <nav class="contenedor">
             <div class="logo">
-                    <img src="logo_fde.png" class="logo-imagen">
+                <img src="logo_fde.png" class="logo-imagen" alt="FDE Logo">
+                <div class="logo-texto">
+                    
+                </div>
             </div>
             <ul class="enlaces-navegacion" id="enlacesNavegacion">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#portafolio">Portafolio</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#contacto" class="boton-contacto-nav">Contacto</a></li>
             </ul>
-            <button class="menu-movil" onclick="alternarMenu()">☰</button>
+            <button class="menu-movil" onclick="alternarMenu()" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
-    <section id="inicio" class="hero navegacion-suave">
+    <section id="inicio" class="hero">
+        <div class="particulas-fondo"></div>
         <div class="contenedor">
             <div class="contenido-hero">
-                <h1>FDE</h1>
-                <h1>Flexible Digital Experiences</h1>
-                <p>Creamos soluciones personalizadas con software que evoluciona, transformando ideas en herramientas digitales intuitivas que maximizan tu eficiencia y fomentan la conexión humana.</p>
-                <h3>"Software que se adapta a ti."</h3>
-                <a href="#contacto" class="boton-cta">Contáctanos →</a>
+                <div class="etiqueta-hero">Innovación Digital</div>
+                <h1 class="titulo-principal">
+                    <span class="texto-gradiente">FDE</span>
+                    <span class="texto-blanco">Flexible Digital Experiences</span>
+                </h1>
+                <p class="descripcion-hero">Creamos soluciones personalizadas con software que evoluciona, transformando ideas en herramientas digitales intuitivas que maximizan tu eficiencia y fomentan la conexión humana.</p>
+                <div class="cita-hero">"Software que se adapta a ti."</div>
+                <div class="acciones-hero">
+                    <a href="#contacto" class="boton-primario">
+                        Comenzar Proyecto
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="#servicios" class="boton-secundario">Ver Servicios</a>
+                </div>
+                
             </div>
+        </div>
+        <div class="scroll-indicador">
+            <span></span>
         </div>
     </section>
     
-    <section id="nosotros" class="seccion navegacion-suave">
+    <section id="nosotros" class="seccion">
         <div class="contenedor">
-            <h2>Nuestra Empresa</h2>
+            <div class="encabezado-seccion">
+                <span class="etiqueta-seccion">Sobre Nosotros</span>
+                <h2>Nuestra Empresa</h2>
+                <p class="subtitulo-seccion">Construyendo el futuro digital con innovación y compromiso</p>
+            </div>
             <div class="grilla-nosotros">
                 <div class="tarjeta-nosotros">
+                    <div class="icono-tarjeta">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4l12 7v14l-12 7-12-7V11l12-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <h3>Misión</h3>
                     <p>Desarrollar soluciones de software innovadoras que conecten personas y faciliten el aprendizaje, la salud y la interacción social mediante aplicaciones móviles y web intuitivas y seguras.</p>
                 </div>
                 <div class="tarjeta-nosotros">
+                    <div class="icono-tarjeta">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 8l8 8-8 8M8 16h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                     <h3>Visión</h3>
                     <p>Aspiramos a ser reconocidos mundialmente como una empresa líder en desarrollo de proyectos digitales flexibles, seguros e innovadores que transforman la manera en que las personas interactúan con la tecnología. Buscamos que nos reconozcan como una empresa ética, confiable y cercana a los cliente que se caracteriza por su calidad, innovación y compromiso.</p>
                 </div>
                 <div class="tarjeta-nosotros">
+                    <div class="icono-tarjeta">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 16l3 3 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3>Objetivos</h3>
                     <p>• Consolidar a FDE como una empresa líder en desarrollo de software en el mercado nacional e internacional en los próximos 10 años.<br><br>• Desarrollar proyectos que fortalezcan la conexión comunitaria y contribuyan al bienestar social.<br><br>• Crear plataformas digitales intuitivas y fáciles de usar que generen valor para la comunidad y los usuarios.</p>
                 </div>
@@ -57,15 +100,64 @@
 
     <section class="seccion seccion-alternativa">
         <div class="contenedor">
-            <h2>Filosofía y Valores</h2>
-            <div class="grilla-nosotros">
-                <div class="tarjeta-nosotros">
+            <div class="encabezado-seccion">
+                <span class="etiqueta-seccion">Nuestros Principios</span>
+                <h2>Filosofía y Valores</h2>
+            </div>
+            <div class="grilla-filosofia">
+                <div class="tarjeta-filosofia">
                     <h3>Filosofía</h3>
-                    <p>• En FDE nos comprometemos a brindar servicios de software de la más alta calidad, siendo competitivos y eficientes en cada proyecto.<br><br>• Valoramos a nuestro equipo como parte fundamental de la empresa, fomentando su bienestar físico y mental y ofreciéndoles apoyo continuo, porque creemos que la ayuda es recíproca.<br><br>• Nuestros clientes son la prioridad en cada fase del desarrollo, por ello mantenemos una comunicación clara y constante para garantizar resultados que superen sus expectativas.<br><br>• Somos conscientes de nuestro entorno y comunidad, por lo que procuramos que cada proyecto aporte beneficios reales y mejoras en la calidad de vida de las personas.</p>
+                    <div class="lista-filosofia">
+                        <div class="item-filosofia">
+                            <span class="marcador-item"></span>
+                            <p>En FDE nos comprometemos a brindar servicios de software de la más alta calidad, siendo competitivos y eficientes en cada proyecto.</p>
+                        </div>
+                        <div class="item-filosofia">
+                            <span class="marcador-item"></span>
+                            <p>Valoramos a nuestro equipo como parte fundamental de la empresa, fomentando su bienestar físico y mental y ofreciéndoles apoyo continuo, porque creemos que la ayuda es recíproca.</p>
+                        </div>
+                        <div class="item-filosofia">
+                            <span class="marcador-item"></span>
+                            <p>Nuestros clientes son la prioridad en cada fase del desarrollo, por ello mantenemos una comunicación clara y constante para garantizar resultados que superen sus expectativas.</p>
+                        </div>
+                        <div class="item-filosofia">
+                            <span class="marcador-item"></span>
+                            <p>Somos conscientes de nuestro entorno y comunidad, por lo que procuramos que cada proyecto aporte beneficios reales y mejoras en la calidad de vida de las personas.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="tarjeta-nosotros">
+                <div class="tarjeta-valores">
                     <h3>Valores</h3>
-                    <p>• Innovación constante<br><br>• Confianza y seguridad<br><br>• Compromiso con la calidad<br><br>• Impacto social positivo<br><br>• Responsabilidad y ética<br><br>• Colaboración<br><br>• Adaptabilidad</p>
+                    <div class="grilla-valores">
+                        <div class="valor-item">
+                            <div class="icono-valor">💡</div>
+                            <span>Innovación constante</span>
+                        </div>
+                        <div class="valor-item">
+                            <div class="icono-valor">🔒</div>
+                            <span>Confianza y seguridad</span>
+                        </div>
+                        <div class="valor-item">
+                            <div class="icono-valor">⭐</div>
+                            <span>Compromiso con la calidad</span>
+                        </div>
+                        <div class="valor-item">
+                            <div class="icono-valor">🌍</div>
+                            <span>Impacto social positivo</span>
+                        </div>
+                        <div class="valor-item">
+                            <div class="icono-valor">✓</div>
+                            <span>Responsabilidad y ética</span>
+                        </div>
+                        <div class="valor-item">
+                            <div class="icono-valor">🤝</div>
+                            <span>Colaboración</span>
+                        </div>
+                        <div class="valor-item">
+                            <div class="icono-valor">🔄</div>
+                            <span>Adaptabilidad</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,27 +165,65 @@
 
     <section class="seccion">
         <div class="contenedor">
-            <h2>Políticas</h2>
-            <div class="grilla-nosotros">
-                <div class="tarjeta-nosotros">
-                    <h3>Para la organización</h3>
-                    <p>• Cumplir siempre con la misión, visión y valores de FDE en cada decisión.<br><br>• Mantener un ambiente laboral respetuoso, inclusivo y de colaboración.<br><br>• Proteger la confidencialidad de los datos internos y de los clientes.</p>
+            <div class="encabezado-seccion">
+                <span class="etiqueta-seccion">Nuestras Reglas</span>
+                <h2>Políticas</h2>
+            </div>
+            <div class="acordeon-politicas">
+                <div class="item-acordeon">
+                    <button class="encabezado-acordeon" onclick="alternarAcordeon(this)">
+                        <span>Para la organización</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="contenido-acordeon">
+                        <p>• Cumplir siempre con la misión, visión y valores de FDE en cada decisión.<br><br>• Mantener un ambiente laboral respetuoso, inclusivo y de colaboración.<br><br>• Proteger la confidencialidad de los datos internos y de los clientes.</p>
+                    </div>
                 </div>
-                <div class="tarjeta-nosotros">
-                    <h3>Para los Departamentos</h3>
-                    <p>• Comunicación constante entre departamentos para asegurar coordinación en cada proyecto.<br><br>• Establecer metas claras y medibles en cada área para cumplir con los objetivos globales.<br><br>• Revisar y actualizar procesos internos para mantener calidad y eficiencia.</p>
+                <div class="item-acordeon">
+                    <button class="encabezado-acordeon" onclick="alternarAcordeon(this)">
+                        <span>Para los Departamentos</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="contenido-acordeon">
+                        <p>• Comunicación constante entre departamentos para asegurar coordinación en cada proyecto.<br><br>• Establecer metas claras y medibles en cada área para cumplir con los objetivos globales.<br><br>• Revisar y actualizar procesos internos para mantener calidad y eficiencia.</p>
+                    </div>
                 </div>
-                <div class="tarjeta-nosotros">
-                    <h3>Para los Servicios</h3>
-                    <p>• Garantizar que cada servicio entregue valor real y cumpla con lo prometido al cliente.<br><br>• Realizar pruebas exhaustivas de calidad en cada entrega.<br><br>• Adaptar los servicios a las necesidades específicas de cada cliente manteniendo precios justos.</p>
+                <div class="item-acordeon">
+                    <button class="encabezado-acordeon" onclick="alternarAcordeon(this)">
+                        <span>Para los Servicios</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="contenido-acordeon">
+                        <p>• Garantizar que cada servicio entregue valor real y cumpla con lo prometido al cliente.<br><br>• Realizar pruebas exhaustivas de calidad en cada entrega.<br><br>• Adaptar los servicios a las necesidades específicas de cada cliente manteniendo precios justos.</p>
+                    </div>
                 </div>
-                <div class="tarjeta-nosotros">
-                    <h3>Para las Actividades</h3>
-                    <p>• Documentar las actividades clave para asegurar transparencia y continuidad.<br><br>• Usar metodologías ágiles en el desarrollo de software para optimizar tiempos y recursos.<br><br>• Promover la capacitación constante del equipo para estar actualizados en tendencias tecnológicas.</p>
+                <div class="item-acordeon">
+                    <button class="encabezado-acordeon" onclick="alternarAcordeon(this)">
+                        <span>Para las Actividades</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="contenido-acordeon">
+                        <p>• Documentar las actividades clave para asegurar transparencia y continuidad.<br><br>• Usar metodologías ágiles en el desarrollo de software para optimizar tiempos y recursos.<br><br>• Promover la capacitación constante del equipo para estar actualizados en tendencias tecnológicas.</p>
+                    </div>
                 </div>
-                <div class="tarjeta-nosotros">
-                    <h3>Para los Proyectos</h3>
-                    <p>• Involucrar al cliente en las etapas clave del proyecto para garantizar entendimiento y satisfacción.<br><br>• Establecer cronogramas realistas y cumplir con los tiempos de entrega.<br><br>• Priorizar proyectos viables y sostenibles según nuestras capacidades como equipo.</p>
+                <div class="item-acordeon">
+                    <button class="encabezado-acordeon" onclick="alternarAcordeon(this)">
+                        <span>Para los Proyectos</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5 7.5l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <div class="contenido-acordeon">
+                        <p>• Involucrar al cliente en las etapas clave del proyecto para garantizar entendimiento y satisfacción.<br><br>• Establecer cronogramas realistas y cumplir con los tiempos de entrega.<br><br>• Priorizar proyectos viables y sostenibles según nuestras capacidades como equipo.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -101,206 +231,411 @@
 
     <section class="seccion seccion-alternativa">
         <div class="contenedor">
-            <h2>Lineamientos</h2>
-            <div class="grilla-nosotros">
-                <div class="tarjeta-nosotros">
+            <div class="encabezado-seccion">
+                <span class="etiqueta-seccion">Gestión de Recursos</span>
+                <h2>Lineamientos</h2>
+            </div>
+            <div class="grilla-lineamientos">
+                <div class="tarjeta-lineamiento">
+                    <div class="icono-lineamiento">👥</div>
                     <h3>Recursos Humanos</h3>
-                    <p>• Fomentar el crecimiento personal y profesional mediante capacitaciones y aprendizaje continuo.<br><br>• Promover la comunicación abierta entre todos los integrantes del equipo.<br><br>• Reconocer el esfuerzo y desempeño individual y colectivo.</p>
+                    <ul class="lista-lineamiento">
+                        <li>Fomentar el crecimiento personal y profesional mediante capacitaciones y aprendizaje continuo.</li>
+                        <li>Promover la comunicación abierta entre todos los integrantes del equipo.</li>
+                        <li>Reconocer el esfuerzo y desempeño individual y colectivo.</li>
+                    </ul>
                 </div>
-                <div class="tarjeta-nosotros">
+                <div class="tarjeta-lineamiento">
+                    <div class="icono-lineamiento">⚙️</div>
                     <h3>Recursos Técnicos</h3>
-                    <p>• Usar herramientas y tecnologías que garanticen seguridad y eficiencia en el desarrollo.<br><br>• Documentar el código y procesos técnicos para facilitar la mantenibilidad.<br><br>• Mantener actualizadas las licencias y software necesarios para el trabajo.</p>
+                    <ul class="lista-lineamiento">
+                        <li>Usar herramientas y tecnologías que garanticen seguridad y eficiencia en el desarrollo.</li>
+                        <li>Documentar el código y procesos técnicos para facilitar la mantenibilidad.</li>
+                        <li>Mantener actualizadas las licencias y software necesarios para el trabajo.</li>
+                    </ul>
                 </div>
-                <div class="tarjeta-nosotros">
+                <div class="tarjeta-lineamiento">
+                    <div class="icono-lineamiento">💰</div>
                     <h3>Recursos Financieros</h3>
-                    <p>• Administrar los recursos económicos con transparencia y responsabilidad.<br><br>• Reinvertir en investigación, innovación y capacitación tecnológica.<br><br>• Mantener precios competitivos para los clientes sin comprometer la calidad.</p>
+                    <ul class="lista-lineamiento">
+                        <li>Administrar los recursos económicos con transparencia y responsabilidad.</li>
+                        <li>Reinvertir en investigación, innovación y capacitación tecnológica.</li>
+                        <li>Mantener precios competitivos para los clientes sin comprometer la calidad.</li>
+                    </ul>
                 </div>
-                <div class="tarjeta-nosotros">
+                <div class="tarjeta-lineamiento">
+                    <div class="icono-lineamiento">🎯</div>
                     <h3>Orientados al cliente</h3>
-                    <p>• Escuchar activamente las necesidades del cliente para ofrecer soluciones personalizadas.<br><br>• Mantener comunicación constante durante el desarrollo de cada proyecto.<br><br>• Cumplir con estándares de calidad y tiempos de entrega pactados.<br><br>• Garantizar soporte técnico y acompañamiento post-entrega.</p>
+                    <ul class="lista-lineamiento">
+                        <li>Escuchar activamente las necesidades del cliente para ofrecer soluciones personalizadas.</li>
+                        <li>Mantener comunicación constante durante el desarrollo de cada proyecto.</li>
+                        <li>Cumplir con estándares de calidad y tiempos de entrega pactados.</li>
+                        <li>Garantizar soporte técnico y acompañamiento post-entrega.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="servicios" class="seccion navegacion-suave">
+    <section id="servicios" class="seccion">
         <div class="contenedor">
-            <h2>Nuestros Servicios</h2>
+            <div class="encabezado-seccion">
+                <span class="etiqueta-seccion">Lo que Hacemos</span>
+                <h2>Nuestros Servicios</h2>
+                <p class="subtitulo-seccion">Soluciones tecnológicas completas para impulsar tu negocio</p>
+            </div>
             <div class="grilla-servicios">
                 <div class="tarjeta-servicio">
-                    <div class="icono-servicio">💻</div>
+                    <div class="icono-servicio">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M5 10h30M5 20h30M5 30h30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3>Desarrollo Web</h3>
                     <p>Creamos sitios web responsivos y aplicaciones web personalizadas utilizando las últimas tecnologías y frameworks del mercado.</p>
+                    <div class="tecnologias-servicio">
+                        <span>React</span>
+                        <span>Vue.js</span>
+                        <span>Node.js</span>
+                    </div>
                 </div>
                 <div class="tarjeta-servicio">
-                    <div class="icono-servicio">📱</div>
+                    <div class="icono-servicio">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="10" y="5" width="20" height="30" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 30h20M20 32v1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3>Apps Móviles</h3>
                     <p>Desarrollamos aplicaciones móviles nativas e híbridas para iOS y Android con interfaces intuitivas y funcionalidades avanzadas.</p>
+                    <div class="tecnologias-servicio">
+                        <span>React Native</span>
+                        <span>Flutter</span>
+                        <span>Swift</span>
+                    </div>
                 </div>
                 <div class="tarjeta-servicio">
-                    <div class="icono-servicio">☁️</div>
+                    <div class="icono-servicio">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 10v20M10 20h20M20 5a15 15 0 100 30 15 15 0 000-30z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3>Soluciones Cloud</h3>
                     <p>Implementamos infraestructuras en la nube escalables y seguras, optimizando costos y mejorando la disponibilidad de servicios.</p>
+                    <div class="tecnologias-servicio">
+                        <span>AWS</span>
+                        <span>Azure</span>
+                        <span>GCP</span>
+                    </div>
                 </div>
                 <div class="tarjeta-servicio">
-                    <div class="icono-servicio">🔧</div>
+                    <div class="icono-servicio">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M15 10l10 10-10 10M10 20h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3>Automatización</h3>
                     <p>Automatizamos procesos empresariales mediante software personalizado que reduce tiempos operativos y minimiza errores humanos.</p>
+                    <div class="tecnologias-servicio">
+                        <span>Python</span>
+                        <span>RPA</span>
+                        <span>APIs</span>
+                    </div>
                 </div>
                 <div class="tarjeta-servicio">
-                    <div class="icono-servicio">🔒</div>
+                    <div class="icono-servicio">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="12" y="10" width="16" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 18v6M20 26h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3>Ciberseguridad</h3>
                     <p>Protegemos tu información con soluciones de seguridad integral, auditorías de vulnerabilidades y protocolos de protección de datos.</p>
+                    <div class="tecnologias-servicio">
+                        <span>Pentesting</span>
+                        <span>SSL/TLS</span>
+                        <span>Firewall</span>
+                    </div>
                 </div>
                 <div class="tarjeta-servicio">
-                    <div class="icono-servicio">📊</div>
+                    <div class="icono-servicio">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M5 30l7-7 5 5 8-8 10 10M30 20v10M25 25v5M20 22v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3>Business Intelligence</h3>
                     <p>Transformamos datos en insights valiosos mediante dashboards interactivos y análisis predictivos para la toma de decisiones.</p>
+                    <div class="tecnologias-servicio">
+                        <span>Power BI</span>
+                        <span>Tableau</span>
+                        <span>Python</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="portafolio" class="seccion seccion-alternativa navegacion-suave">
+    <section id="portafolio" class="seccion seccion-alternativa">
         <div class="contenedor">
-            <h2>Portafolio de Proyectos</h2>
+            <div class="encabezado-seccion">
+                <span class="etiqueta-seccion">Nuestro Trabajo</span>
+                <h2>Portafolio de Proyectos</h2>
+                <p class="subtitulo-seccion">Proyectos exitosos que transforman negocios</p>
+            </div>
             <div class="grilla-portafolio">
-                <div class="elemento-portafolio">
-                    <div class="imagen-portafolio">🏪</div>
+                <div class="tarjeta-portafolio">
+                    <div class="imagen-portafolio">
+                        <div class="icono-portafolio">🏪</div>
+                        <div class="overlay-portafolio"></div>
+                    </div>
                     <div class="contenido-portafolio">
                         <h3>E-Commerce TechStore</h3>
                         <p>Plataforma de comercio electrónico completa con sistema de pagos integrado, gestión de inventario y panel administrativo avanzado.</p>
-                        <p><strong>Tecnologías:</strong> React, Node.js, MongoDB, Stripe API</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe API</span>
+                        </div>
                     </div>
                 </div>
-                <div class="elemento-portafolio">
-                    <div class="imagen-portafolio">🏥</div>
+                <div class="tarjeta-portafolio">
+                    <div class="imagen-portafolio">
+                        <div class="icono-portafolio">🏥</div>
+                        <div class="overlay-portafolio"></div>
+                    </div>
                     <div class="contenido-portafolio">
                         <h3>Sistema Hospitalario MedFlow</h3>
                         <p>Sistema integral de gestión hospitalaria con módulos para citas médicas, historiales clínicos y facturación automatizada.</p>
-                        <p><strong>Tecnologías:</strong> Vue.js, Laravel, MySQL, Docker</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
                     </div>
                 </div>
-                <div class="elemento-portafolio">
-                    <div class="imagen-portafolio">📚</div>
+                <div class="tarjeta-portafolio">
+                    <div class="imagen-portafolio">
+                        <div class="icono-portafolio">📚</div>
+                        <div class="overlay-portafolio"></div>
+                    </div>
                     <div class="contenido-portafolio">
                         <h3>Plataforma Educativa EduTech</h3>
                         <p>LMS (Learning Management System) con videoconferencias integradas, evaluaciones automatizadas y seguimiento de progreso estudiantil.</p>
-                        <p><strong>Tecnologías:</strong> Angular, .NET Core, PostgreSQL, WebRTC</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">.NET Core</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">WebRTC</span>
+                        </div>
                     </div>
                 </div>
-                <div class="elemento-portafolio">
-                    <div class="imagen-portafolio">📊</div>
+                <div class="tarjeta-portafolio">
+                    <div class="imagen-portafolio">
+                        <div class="icono-portafolio">📊</div>
+                        <div class="overlay-portafolio"></div>
+                    </div>
                     <div class="contenido-portafolio">
                         <h3>Dashboard Analytics ProData</h3>
                         <p>Sistema de business intelligence con visualizaciones interactivas y reportes automatizados para análisis empresarial en tiempo real.</p>
-                        <p><strong>Tecnologías:</strong> Python, Django, Chart.js, Redis</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
                     </div>
                 </div>
-                <div class="elemento-portafolio">
-                    <div class="imagen-portafolio">🚚</div>
+                <div class="tarjeta-portafolio">
+                    <div class="imagen-portafolio">
+                        <div class="icono-portafolio">🚚</div>
+                        <div class="overlay-portafolio"></div>
+                    </div>
                     <div class="contenido-portafolio">
                         <h3>App Logística FleetTrack</h3>
                         <p>Aplicación móvil para rastreo de flotas vehiculares con GPS en tiempo real, optimización de rutas y gestión de combustible.</p>
-                        <p><strong>Tecnologías:</strong> React Native, Firebase, Google Maps API</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Google Maps API</span>
+                        </div>
                     </div>
                 </div>
-                <div class="elemento-portafolio">
-                    <div class="imagen-portafolio">🏦</div>
+                <div class="tarjeta-portafolio">
+                    <div class="imagen-portafolio">
+                        <div class="icono-portafolio">🏦</div>
+                        <div class="overlay-portafolio"></div>
+                    </div>
                     <div class="contenido-portafolio">
                         <h3>Fintech SecureBank</h3>
                         <p>Plataforma fintech con wallet digital, transferencias P2P, inversiones automatizadas y cumplimiento de regulaciones financieras.</p>
-                        <p><strong>Tecnologías:</strong> Java Spring, React, Oracle DB, Kubernetes</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java Spring</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Oracle DB</span>
+                            <span class="tech-tag">Kubernetes</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <section id="contacto" class="seccion navegacion-suave">
+    <section id="contacto" class="seccion seccion-contacto">
         <div class="contenedor">
-            <h2>Contacto</h2>
-            <div class="contenido-contacto">
+            <div class="encabezado-seccion">
+                <span class="etiqueta-seccion">Hablemos</span>
+                <h2>Contacto</h2>
+                <p class="subtitulo-seccion">¿Tienes un proyecto en mente? Conversemos sobre cómo podemos ayudarte</p>
+            </div>
+            <div class="contenedor-contacto">
                 <div class="informacion-contacto">
                     <h3>Información de Contacto</h3>
-                    <div class="elemento-contacto">
-                        <div class="icono-contacto">📧</div>
-                        <div>
-                            <strong>Email</strong><br>
-                            fde.corp@gmail.com
+                    <div class="lista-contacto">
+                        <div class="item-contacto">
+                            <div class="icono-contacto">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="info-contacto">
+                                <strong>Email</strong>
+                                <a href="mailto:fde.corp@gmail.com">fde.corp@gmail.com</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="elemento-contacto">
-                        <div class="icono-contacto">📱</div>
-                        <div>
-                            <strong>Teléfono</strong><br>
-                            +52 56-2358-9128<br>
-                            +52 56-1158-7631
+                        <div class="item-contacto">
+                            <div class="icono-contacto">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="info-contacto">
+                                <strong>Teléfono</strong>
+                                <a href="tel:+525623589128">+52 56-2358-9128</a>
+                                <a href="tel:+525611587631">+52 56-1158-7631</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="elemento-contacto">
-                        <div class="icono-contacto">📍</div>
-                        <div>
-                            <strong>Dirección</strong><br>
-                            Mar Mediterráneo, 227<br>
-                            Miguel Hidalgo, CDMX, México
+                        <div class="item-contacto">
+                            <div class="icono-contacto">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="info-contacto">
+                                <strong>Dirección</strong>
+                                <p>Mar Mediterráneo, 227<br>Miguel Hidalgo, CDMX, México</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="elemento-contacto">
-                        <div class="icono-contacto">🕒</div>
-                        <div>
-                            <strong>Horario de Atención</strong><br>
-                            Lunes a Viernes: 9:00 AM - 6:00 PM<br>
-                            Sábados: 9:00 AM - 2:00 PM
+                        <div class="item-contacto">
+                            <div class="icono-contacto">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="info-contacto">
+                                <strong>Horario de Atención</strong>
+                                <p>Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 2:00 PM</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="formulario-contacto">
-                    <h3>Envíanos un Mensaje</h3>
-                    <form onsubmit="manejarEnvio(event)">
-                        <div class="grupo-formulario">
-                            <label for="nombre">Nombre Completo</label>
-                            <input type="text" id="nombre" name="nombre" required>
+                    <form onsubmit="manejarEnvio(event)" class="form-contacto">
+                        <div class="fila-form">
+                            <div class="grupo-form">
+                                <label for="nombre">Nombre Completo</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="grupo-form">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            </div>
                         </div>
-                        <div class="grupo-formulario">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" required>
+                        <div class="fila-form">
+                            <div class="grupo-form">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="+52 123 456 7890">
+                            </div>
+                            <div class="grupo-form">
+                                <label for="servicio">Servicio de Interés</label>
+                                <select id="servicio" name="servicio">
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="desarrollo-web">Desarrollo Web</option>
+                                    <option value="apps-moviles">Apps Móviles</option>
+                                    <option value="soluciones-cloud">Soluciones Cloud</option>
+                                    <option value="automatizacion">Automatización</option>
+                                    <option value="ciberseguridad">Ciberseguridad</option>
+                                    <option value="business-intelligence">Business Intelligence</option>
+                                    <option value="consultoria">Consultoría General</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="grupo-formulario">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono">
-                        </div>
-                        <div class="grupo-formulario">
-                            <label for="servicio">Servicio de Interés</label>
-                            <select id="servicio" name="servicio">
-                                <option value="">Selecciona un servicio</option>
-                                <option value="desarrollo-web">Desarrollo Web</option>
-                                <option value="apps-moviles">Apps Móviles</option>
-                                <option value="soluciones-cloud">Soluciones Cloud</option>
-                                <option value="automatizacion">Automatización</option>
-                                <option value="ciberseguridad">Ciberseguridad</option>
-                                <option value="business-intelligence">Business Intelligence</option>
-                                <option value="consultoria">Consultoría General</option>
-                            </select>
-                        </div>
-                        <div class="grupo-formulario">
+                        <div class="grupo-form">
                             <label for="mensaje">Mensaje</label>
                             <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
                         </div>
-                        <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+                        <button type="submit" class="boton-enviar">
+                            Enviar Mensaje
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M18 2L9 11m9-9l-6 16-3-7-7-3 16-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="footer">
         <div class="contenedor">
-            <p>&copy; 2025 FDE (Flexible Digital Experiences). Todos los derechos reservados.</p>
+            <div class="contenido-footer">
+                <div class="columna-footer">
+                    <div class="logo-footer">
+                        <img src="logo_fde.png" class="logo-imagen-footer" alt="FDE Logo">
+                        <div>
+                            <div class="nombre-footer">FDE</div>
+                            <div class="subtitulo-footer">Flexible Digital Experiences</div>
+                        </div>
+                    </div>
+                    <p class="descripcion-footer">Transformando ideas en soluciones digitales innovadoras desde 2025.</p>
+                </div>
+                <div class="columna-footer">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="lista-footer">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
+                    </ul>
+                </div>
+                <div class="columna-footer">
+                    <h4>Servicios</h4>
+                    <ul class="lista-footer">
+                        <li><a href="#servicios">Desarrollo Web</a></li>
+                        <li><a href="#servicios">Apps Móviles</a></li>
+                        <li><a href="#servicios">Soluciones Cloud</a></li>
+                        <li><a href="#servicios">Ciberseguridad</a></li>
+                    </ul>
+                </div>
+                <div class="columna-footer">
+                    <h4>Contacto</h4>
+                    <ul class="lista-footer">
+                        <li>fde.corp@gmail.com</li>
+                        <li>+52 56-2358-9128</li>
+                        <li>Miguel Hidalgo, CDMX</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="separador-footer"></div>
+            <div class="copyright">
+                <p>&copy; 2025 FDE (Flexible Digital Experiences). Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
